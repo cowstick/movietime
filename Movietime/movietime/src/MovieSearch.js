@@ -22,7 +22,7 @@ function MovieSearch() {
 
   return (
     <div className="movie-search">
-      <h1>Find Streaming Service</h1>
+      <h1>What would you like to watch?</h1>
       <form onSubmit={handleSearch}>
         <select value={type} onChange={(e) => setType(e.target.value)}>
           <option value="movie">Movie</option>
@@ -30,7 +30,7 @@ function MovieSearch() {
         </select>
         <input
           type="text"
-          placeholder="Enter ID..."
+          placeholder="Enter Title Here"
           value={id}
           onChange={(e) => setId(e.target.value)}
         />
