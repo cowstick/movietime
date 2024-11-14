@@ -1,0 +1,66 @@
+/* Movie Search Box Styling */
+.movie-search {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Styling for the inputs, select, and button inside the search box */
+  .movie-search input,
+  .movie-search select,
+  .movie-search button {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  /* Styling for the search button */
+  .movie-search button {
+    background-color: #f39c12;
+    color: #1a1a1d;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .movie-search button:hover {
+    box-shadow: 0 0 15px rgba(243, 156, 18, 0.8), 0 0 30px rgba(243, 156, 18, 0.6);
+    transform: scale(1.05);
+  }
+  
+  /* Styling for the input fields inside the search box */
+  .movie-search input,
+  .movie-search select {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #3c3c42;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .movie-search input:focus,
+  .movie-search select:focus {
+    outline: none;
+    border: 2px solid #f39c12;
+    background-color: #333;
+  }
+  
+  /* Styling for the title inside the Movie Search box */
+  .movie-search h1 {
+    color: #f39c12; /* Same color as movie title */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Same shadow effect as movie title */
+    font-family: 'Bangers', cursive; /* Movie-style font */
+    text-align: center;
+    font-size: 3rem; /* Adjust size if necessary */
+  }
+  

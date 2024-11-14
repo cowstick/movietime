@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useSpring, animated } from '@react-spring/web';
+import { useSpring, animated } from "@react-spring/web";
 import "./App.css";
 import MovieSearch from "./MovieSearch"; // Assuming you already have this component
 
@@ -9,7 +9,7 @@ function App() {
   // React Spring: Define the curtain animation for left and right curtains
   const leftCurtainStyle = useSpring({
     transform: isOpen ? "translateX(-100%)" : "translateX(0%)", // Opening/closing effect
-    config: { tension: 170, friction: 26 }, // Customize the spring animation
+    config: { tension: 170, friction: 26 },
   });
 
   const rightCurtainStyle = useSpring({
@@ -29,15 +29,17 @@ function App() {
       {/* Left Curtain animated with React Spring */}
       <animated.div className="curtain-left" style={leftCurtainStyle}></animated.div>
 
+      {/* Movie Search Box container positioned to the left of the screen */}
+      <div className="movie-search-container">
+        <MovieSearch />
+      </div>
+
       <div className="screen-container">
         {/* Movie Title */}
         <h1 className="movie-title">Now Showing</h1>
-        
+
         {/* Movie Screen */}
-        <div className="screen">
-          {/* Movie Search Box */}
-          <MovieSearch />
-        </div>
+        <div className="screen"></div>
       </div>
 
       {/* Right Curtain animated with React Spring */}

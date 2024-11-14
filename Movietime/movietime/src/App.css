@@ -4,24 +4,24 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #1a1a1d; /* Dark theme */
+  background-color: #1a1a1d;
   position: relative;
   overflow: hidden;
 }
 
-/* Movie Theater Curtains with realistic texture */
+/* Curtains */
 .curtain-left,
 .curtain-right {
-  background: linear-gradient(180deg, rgba(139, 0, 0, 0.8) 0%, rgba(255, 0, 0, 0.9) 100%); /* Gradient for depth */
+  background: linear-gradient(180deg, rgba(139, 0, 0, 0.8) 0%, rgba(255, 0, 0, 0.9) 100%);
   width: 180px;
   height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
-  box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.7); /* Inner shadow to add texture */
-  background-image: url('https://www.transparenttextures.com/patterns/linen.png'); /* Subtle texture */
+  box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.7);
+  background-image: url("https://www.transparenttextures.com/patterns/linen.png");
   background-size: 20px 20px;
-  transition: all 1s ease; /* Smooth animation */
+  transition: all 1s ease;
 }
 
 .curtain-left {
@@ -32,162 +32,49 @@
   right: 0;
 }
 
-/* Curtain animation to simulate opening */
-.curtain-left.open,
-.curtain-right.open {
-  transform: translateX(-100%);
+/* Movie Search Container */
+.movie-search-container {
+  position: absolute;
+  left: 20px;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }
 
-/* Movie Screen Container */
+/* Screen Container */
 .screen-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 70%;
-  max-width: 1000px;
-  margin: 0 30px;
+  max-width: 800px;
+  margin: 0 auto;
   position: relative;
 }
 
-/* Movie Title (above the screen) */
+/* Now Showing Title */
 .movie-title {
   font-size: 3rem;
   color: #f39c12;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
-  font-family: 'Bangers', cursive; /* Movie-style font */
+  font-family: "Bangers", cursive;
   text-align: center;
 }
 
 /* Movie Screen */
 .screen {
-  background-color: #2e2e37; /* Dark gray screen */
+  background-color: #2e2e37;
   width: 100%;
   height: 450px;
-  border: 10px solid #f39c12; /* Golden border */
+  border: 10px solid #f39c12;
   border-radius: 10px;
-  position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  overflow: hidden;
-}
-
-/* Box Office (Search Form inside the screen) */
-.screen .movie-search {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-}
-
-/* Styling for inputs, selects, and buttons inside the screen */
-.screen .movie-search input,
-.screen .movie-search select,
-.screen .movie-search button {
-  margin-bottom: 1rem;
-  width: 100%;
-}
-
-/* Styling for the form and button inside the screen */
-.screen .movie-search button {
-  background-color: #f39c12;
-  color: #1a1a1d;
-  font-size: 1.2rem;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.screen .movie-search button:hover {
-  box-shadow: 0 0 15px rgba(243, 156, 18, 0.8), 0 0 30px rgba(243, 156, 18, 0.6);
-  transform: scale(1.05);
-}
-
-/* Styling for the results and movie title */
-.results {
-  padding: 10px;
-  text-align: center;
-}
-
-.results h2 {
-  font-size: 2rem;
-  color: #f39c12;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-}
-
-.results ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.results li {
-  color: #fff;
-  font-size: 1.2rem;
-  margin: 5px 0;
-}
-
-/* Error styling */
-.error {
-  color: #e74c3c;
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-/* Extra styles for the search box inside the screen */
-.screen .movie-search input,
-.screen .movie-search select {
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  border-radius: 8px;
-  border: none;
-  background-color: #3c3c42;
-  color: #e0e0e0;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.screen .movie-search input:focus,
-.screen .movie-search select:focus {
-  outline: none;
-  border: 2px solid #f39c12;
-  background-color: #333;
-}
-
-/* Additional touches for movie theater ambiance */
-.screen .movie-search label {
-  color: #f39c12;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.movie-title {
-  font-size: 3rem;
-  color: #f39c12;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-  margin-bottom: 20px;
-  font-family: 'Bangers', cursive;
-  text-align: center;
-}
-
-/* Add a slight glow effect to the curtains for realism */
-.curtain-left,
-.curtain-right {
-  box-shadow: 0 0 20px rgba(139, 0, 0, 0.6), inset 0 5px 20px rgba(0, 0, 0, 0.7); /* Outer glow for realism */
-}
-
-/* Movie Title color for h1 in MovieSearch */
-.movie-search h1 {
-  color: #f39c12; /* Same color as the movie title */
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Same shadow effect as movie title */
-  font-family: 'Bangers', cursive; /* Movie-style font */
-  text-align: center;
-  font-size: 3rem; /* Adjust size if necessary */
+  position: relative;
 }
